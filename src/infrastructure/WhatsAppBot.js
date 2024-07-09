@@ -15,7 +15,7 @@ class WhatsAppBot {
   }
 
   initialize() {
-    this.client.on("qr", () => this.handleQRCodeGeneration(qr));
+    this.client.on("qr", (qr) => this.handleQRCodeGeneration(qr));
     this.client.on("ready", () => this.onReady());
     this.client.initialize();
   }
